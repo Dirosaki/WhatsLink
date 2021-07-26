@@ -1,0 +1,36 @@
+.button {
+  padding-left: 2rem;
+  height: 2.625rem;
+  width: 20.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 6px;
+  background: var(--gradient);
+  box-shadow: var(--box-shadow);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--white);
+
+  &.clip {
+    padding-left: 0;
+  }
+
+  .arrow {
+    margin-left: 0.5rem;
+    opacity: 0;
+    transition: 0.2s;
+  }
+
+  @media (hover: hover) {
+    &:hover .arrow {
+      opacity: 1;
+      transform: translateX(0.5rem);
+    }
+  }
+
+  @media (max-width: "450px") {
+    width: 75vw;
+  }
+}
